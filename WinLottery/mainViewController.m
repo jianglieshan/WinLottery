@@ -13,9 +13,11 @@
 #import "UIImageView+AFNetworking.h"
 //#import "weightViewController.h"
 //#import "surfaceMagneticV2.h"
-
+#import "MarqueeLabel.h"
 @interface mainViewController ()
-
+{
+    MarqueeLabel *scrollLabel;
+}
 @end
 
 @implementation mainViewController
@@ -28,7 +30,9 @@
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -208,13 +212,24 @@
                 [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
                 [loginBtn.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
                 [cell.contentView addSubview:loginBtn];
+                if (scrollLabel==nil) {
+                    scrollLabel = [[MarqueeLabel alloc] initWithFrame:CGRectMake(60, 3, 80, 20)];
+                    scrollLabel.marqueeType = MLLeftRight;
+                    scrollLabel.rate = 30.0f;
+                    scrollLabel.fadeLength = 5.0f;
+                    scrollLabel.textAlignment = NSTextAlignmentCenter;
+                    scrollLabel.tag = 101;
+                    scrollLabel.text = @"This is a test of MarqueeLabel - the text is long enough that it needs to scroll to see the whole thing.";
+                    [MarqueeLabel controllerViewWillAppear:self];
+                    [cell.contentView addSubview:scrollLabel];
+                }
             }
             return cell;
         }
         else{
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contentcell"];
             if (!cell) {
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"infocell"];
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"contentcell"];
             }
             return cell;
         }

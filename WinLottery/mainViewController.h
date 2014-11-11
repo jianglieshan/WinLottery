@@ -18,6 +18,4 @@
 
 @property (nonatomic , retain) CycleScrollView *mainScorllView;
 @property (weak, nonatomic) IBOutlet UITableView *tableview_;
-- (IBAction)userMethod:(id)sender;
-- (IBAction)aboutUs:(id)sender;
 @end

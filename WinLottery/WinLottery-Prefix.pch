@@ -1,0 +1,39 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define MAKEPATH(keypath) [NSString stringWithFormat:@"http://218.244.144.200/Calculator/api/%@",keypath]
+
+#define UUID [[NSUserDefaults standardUserDefaults] objectForKey:@"UUID"]
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+#define SHOWHUD MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];[self.view addSubview:hud];[hud show:YES];
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define MAINCOLOR [UIColor colorWithRed:0/255.0f green:139/255.0f blue:177/255.0f alpha:1]
+
+#define SELECTCOLOR [UIColor colorWithRed:0/255.0f green:104/255.0f blue:200/255.0f alpha:1]
+
+#define MAINBGCOLOR [UIColor colorWithRed:220/255.0f green:220/255.0f blue:220/255.0f alpha:1]
+#define VERSION @"0"
+
+#define ALERT(title,mes) UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:mes delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];[alert show];
+
+

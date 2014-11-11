@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F0058055197B9A470006B49D /* MagnetUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = F0058054197B9A470006B49D /* MagnetUtil.c */; };
-		F00B30021976B2F900FB9C4C /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00B30001976B2F900FB9C4C /* CalculatorViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F00B30031976B2F900FB9C4C /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00B30011976B2F900FB9C4C /* CalculatorViewController.xib */; };
 		F00B30071976BAD500FB9C4C /* newsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F00B30051976BAD500FB9C4C /* newsDetailVC.m */; };
 		F00B30081976BAD500FB9C4C /* newsDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00B30061976BAD500FB9C4C /* newsDetailVC.xib */; };
-		F02551BC1979F98E00289E7A /* weightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F02551BA1979F98E00289E7A /* weightViewController.m */; };
-		F02551BD1979F98E00289E7A /* weightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02551BB1979F98E00289E7A /* weightViewController.xib */; };
 		F025C92C19854E2000A58BDE /* about_img.png in Resources */ = {isa = PBXBuildFile; fileRef = F025C91519854E2000A58BDE /* about_img.png */; };
 		F025C92D19854E2000A58BDE /* about_money.png in Resources */ = {isa = PBXBuildFile; fileRef = F025C91619854E2000A58BDE /* about_money.png */; };
 		F025C92E19854E2000A58BDE /* about_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = F025C91719854E2000A58BDE /* about_ok.png */; };
@@ -37,7 +33,6 @@
 		F025C94019854E2000A58BDE /* radio_unchecked.9.png in Resources */ = {isa = PBXBuildFile; fileRef = F025C92919854E2000A58BDE /* radio_unchecked.9.png */; };
 		F025C94119854E2000A58BDE /* split_h.png in Resources */ = {isa = PBXBuildFile; fileRef = F025C92A19854E2000A58BDE /* split_h.png */; };
 		F025C94219854E2000A58BDE /* weight.png in Resources */ = {isa = PBXBuildFile; fileRef = F025C92B19854E2000A58BDE /* weight.png */; };
-		F025C9451985539400A58BDE /* Managet.m in Sources */ = {isa = PBXBuildFile; fileRef = F025C9441985539400A58BDE /* Managet.m */; };
 		F025C9481985616600A58BDE /* normal.png in Resources */ = {isa = PBXBuildFile; fileRef = F025C9471985616600A58BDE /* normal.png */; };
 		F04E2C8319798C3E007E29F8 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F04E2C6119798C3E007E29F8 /* CycleScrollView.m */; };
 		F04E2C8419798C3E007E29F8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04E2C6319798C3E007E29F8 /* HomeViewController.m */; };
@@ -67,27 +62,15 @@
 		F0B3E6A3197571CD008DC625 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B3E6A1197571CD008DC625 /* MBProgressHUD.m */; };
 		F0BB62E61976BFD600BBAE31 /* newsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BB62E41976BFD600BBAE31 /* newsListVC.m */; };
 		F0BB62E71976BFD600BBAE31 /* newsListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BB62E51976BFD600BBAE31 /* newsListVC.xib */; };
-		F0F99ED21986848D00C5D4E4 /* userMethodVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F99ED01986848D00C5D4E4 /* userMethodVC.m */; };
-		F0F99ED31986848D00C5D4E4 /* userMethodVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F99ED11986848D00C5D4E4 /* userMethodVC.xib */; };
-		F0F99ED719868AF300C5D4E4 /* aboutUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F99ED519868AF300C5D4E4 /* aboutUsVC.m */; };
-		F0F99ED819868AF300C5D4E4 /* aboutUsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F99ED619868AF300C5D4E4 /* aboutUsVC.xib */; };
 		F0F99EDA1986926400C5D4E4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F99ED91986926400C5D4E4 /* MessageUI.framework */; };
-		F0FB0B6B1983C76A00764248 /* surfaceMagneticV2.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FB0B691983C76A00764248 /* surfaceMagneticV2.m */; };
-		F0FB0B6C1983C76A00764248 /* surfaceMagneticV2.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FB0B6A1983C76A00764248 /* surfaceMagneticV2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2AA2FEF81A11DB0700D8A316 /* WinLottery-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WinLottery-Prefix.pch"; sourceTree = "<group>"; };
 		F0058054197B9A470006B49D /* MagnetUtil.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = MagnetUtil.c; sourceTree = "<group>"; };
-		F00B2FFF1976B2F900FB9C4C /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
-		F00B30001976B2F900FB9C4C /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
-		F00B30011976B2F900FB9C4C /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		F00B30041976BAD500FB9C4C /* newsDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsDetailVC.h; sourceTree = "<group>"; };
 		F00B30051976BAD500FB9C4C /* newsDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsDetailVC.m; sourceTree = "<group>"; };
 		F00B30061976BAD500FB9C4C /* newsDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsDetailVC.xib; sourceTree = "<group>"; };
-		F02551B91979F98E00289E7A /* weightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weightViewController.h; sourceTree = "<group>"; };
-		F02551BA1979F98E00289E7A /* weightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weightViewController.m; sourceTree = "<group>"; };
-		F02551BB1979F98E00289E7A /* weightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = weightViewController.xib; sourceTree = "<group>"; };
 		F025C91519854E2000A58BDE /* about_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_img.png; sourceTree = "<group>"; };
 		F025C91619854E2000A58BDE /* about_money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_money.png; sourceTree = "<group>"; };
 		F025C91719854E2000A58BDE /* about_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_ok.png; sourceTree = "<group>"; };
@@ -111,8 +94,6 @@
 		F025C92919854E2000A58BDE /* radio_unchecked.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_unchecked.9.png; sourceTree = "<group>"; };
 		F025C92A19854E2000A58BDE /* split_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = split_h.png; sourceTree = "<group>"; };
 		F025C92B19854E2000A58BDE /* weight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weight.png; sourceTree = "<group>"; };
-		F025C9431985539400A58BDE /* Managet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Managet.h; sourceTree = "<group>"; };
-		F025C9441985539400A58BDE /* Managet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Managet.m; sourceTree = "<group>"; };
 		F025C9471985616600A58BDE /* normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal.png; sourceTree = "<group>"; };
 		F04E2C6019798C3E007E29F8 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollView.h; sourceTree = "<group>"; };
 		F04E2C6119798C3E007E29F8 /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleScrollView.m; sourceTree = "<group>"; };
@@ -164,16 +145,7 @@
 		F0BB62E31976BFD600BBAE31 /* newsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsListVC.h; sourceTree = "<group>"; };
 		F0BB62E41976BFD600BBAE31 /* newsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsListVC.m; sourceTree = "<group>"; };
 		F0BB62E51976BFD600BBAE31 /* newsListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsListVC.xib; sourceTree = "<group>"; };
-		F0F99ECF1986848D00C5D4E4 /* userMethodVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userMethodVC.h; sourceTree = "<group>"; };
-		F0F99ED01986848D00C5D4E4 /* userMethodVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userMethodVC.m; sourceTree = "<group>"; };
-		F0F99ED11986848D00C5D4E4 /* userMethodVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userMethodVC.xib; sourceTree = "<group>"; };
-		F0F99ED419868AF300C5D4E4 /* aboutUsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutUsVC.h; sourceTree = "<group>"; };
-		F0F99ED519868AF300C5D4E4 /* aboutUsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutUsVC.m; sourceTree = "<group>"; };
-		F0F99ED619868AF300C5D4E4 /* aboutUsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = aboutUsVC.xib; sourceTree = "<group>"; };
 		F0F99ED91986926400C5D4E4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		F0FB0B681983C76A00764248 /* surfaceMagneticV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = surfaceMagneticV2.h; sourceTree = "<group>"; };
-		F0FB0B691983C76A00764248 /* surfaceMagneticV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = surfaceMagneticV2.m; sourceTree = "<group>"; };
-		F0FB0B6A1983C76A00764248 /* surfaceMagneticV2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = surfaceMagneticV2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,31 +163,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F00B2FFE1976B2F900FB9C4C /* calcul */ = {
+		2AA2FEF91A11E33C00D8A316 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				F00B2FFF1976B2F900FB9C4C /* CalculatorViewController.h */,
-				F00B30001976B2F900FB9C4C /* CalculatorViewController.m */,
-				F00B30011976B2F900FB9C4C /* CalculatorViewController.xib */,
+				F00B30041976BAD500FB9C4C /* newsDetailVC.h */,
+				F00B30051976BAD500FB9C4C /* newsDetailVC.m */,
+				F00B30061976BAD500FB9C4C /* newsDetailVC.xib */,
+				F0BB62E31976BFD600BBAE31 /* newsListVC.h */,
+				F0BB62E41976BFD600BBAE31 /* newsListVC.m */,
+				F0BB62E51976BFD600BBAE31 /* newsListVC.xib */,
 			);
-			path = calcul;
-			sourceTree = "<group>";
-		};
-		F02551B71979F8FB00289E7A /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
-		F02551B81979F92900289E7A /* weightcalculate */ = {
-			isa = PBXGroup;
-			children = (
-				F02551B91979F98E00289E7A /* weightViewController.h */,
-				F02551BA1979F98E00289E7A /* weightViewController.m */,
-				F02551BB1979F98E00289E7A /* weightViewController.xib */,
-			);
-			name = weightcalculate;
+			name = News;
 			sourceTree = "<group>";
 		};
 		F025C91419854E2000A58BDE /* img */ = {
@@ -264,16 +222,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		F0694156197A4DEE0018AF4F /* surfacemagnetic */ = {
-			isa = PBXGroup;
-			children = (
-				F0FB0B681983C76A00764248 /* surfaceMagneticV2.h */,
-				F0FB0B691983C76A00764248 /* surfaceMagneticV2.m */,
-				F0FB0B6A1983C76A00764248 /* surfaceMagneticV2.xib */,
-			);
-			name = surfacemagnetic;
-			sourceTree = "<group>";
-		};
 		F0B3E63519756C81008DC625 = {
 			isa = PBXGroup;
 			children = (
@@ -307,30 +255,16 @@
 		F0B3E64719756C81008DC625 /* WinLottery */ = {
 			isa = PBXGroup;
 			children = (
-				F0694156197A4DEE0018AF4F /* surfacemagnetic */,
-				F02551B81979F92900289E7A /* weightcalculate */,
-				F02551B71979F8FB00289E7A /* New Group */,
+				2AA2FEF91A11E33C00D8A316 /* News */,
 				F0B3E67019756DAF008DC625 /* mainViewController.h */,
 				F0B3E67119756DAF008DC625 /* mainViewController.m */,
 				F0B3E67219756DAF008DC625 /* mainViewController.xib */,
-				F0F99ECF1986848D00C5D4E4 /* userMethodVC.h */,
-				F0F99ED01986848D00C5D4E4 /* userMethodVC.m */,
-				F0F99ED11986848D00C5D4E4 /* userMethodVC.xib */,
-				F0F99ED419868AF300C5D4E4 /* aboutUsVC.h */,
-				F0F99ED519868AF300C5D4E4 /* aboutUsVC.m */,
-				F0F99ED619868AF300C5D4E4 /* aboutUsVC.xib */,
 				F0B3E65019756C81008DC625 /* AppDelegate.h */,
 				F0B3E65119756C81008DC625 /* AppDelegate.m */,
 				F0B3E65319756C81008DC625 /* Images.xcassets */,
 				F0B3E64819756C81008DC625 /* Supporting Files */,
 				F0B3E699197570AA008DC625 /* AFCustomClient.h */,
 				F0B3E69A197570AA008DC625 /* AFCustomClient.m */,
-				F00B30041976BAD500FB9C4C /* newsDetailVC.h */,
-				F00B30051976BAD500FB9C4C /* newsDetailVC.m */,
-				F00B30061976BAD500FB9C4C /* newsDetailVC.xib */,
-				F0BB62E31976BFD600BBAE31 /* newsListVC.h */,
-				F0BB62E41976BFD600BBAE31 /* newsListVC.m */,
-				F0BB62E51976BFD600BBAE31 /* newsListVC.xib */,
 			);
 			path = WinLottery;
 			sourceTree = "<group>";
@@ -351,12 +285,9 @@
 			children = (
 				F0058054197B9A470006B49D /* MagnetUtil.c */,
 				F04E2C5F19798C3E007E29F8 /* Classes */,
-				F00B2FFE1976B2F900FB9C4C /* calcul */,
 				F0B3E69C197571CD008DC625 /* JSONKit */,
 				F0B3E69F197571CD008DC625 /* MBPHUD */,
 				F0B3E67619756EB8008DC625 /* afnetwork */,
-				F025C9431985539400A58BDE /* Managet.h */,
-				F025C9441985539400A58BDE /* Managet.m */,
 			);
 			name = "third part";
 			path = "WinLottery/third part";
@@ -459,9 +390,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F02551BD1979F98E00289E7A /* weightViewController.xib in Resources */,
-				F0F99ED31986848D00C5D4E4 /* userMethodVC.xib in Resources */,
-				F0F99ED819868AF300C5D4E4 /* aboutUsVC.xib in Resources */,
 				F025C93719854E2000A58BDE /* btn_press.9.png in Resources */,
 				F025C93F19854E2000A58BDE /* radio_checked.9.png in Resources */,
 				F025C93D19854E2000A58BDE /* density.png in Resources */,
@@ -469,7 +397,6 @@
 				F0B3E64C19756C81008DC625 /* InfoPlist.strings in Resources */,
 				F025C92E19854E2000A58BDE /* about_ok.png in Resources */,
 				F025C94219854E2000A58BDE /* weight.png in Resources */,
-				F0FB0B6C1983C76A00764248 /* surfaceMagneticV2.xib in Resources */,
 				F025C93E19854E2000A58BDE /* icon.png in Resources */,
 				F025C93A19854E2000A58BDE /* current_task_pointer@2x.png in Resources */,
 				F00B30081976BAD500FB9C4C /* newsDetailVC.xib in Resources */,
@@ -479,7 +406,6 @@
 				F0B3E65419756C81008DC625 /* Images.xcassets in Resources */,
 				F025C9481985616600A58BDE /* normal.png in Resources */,
 				F025C93319854E2000A58BDE /* bg_item.png in Resources */,
-				F00B30031976B2F900FB9C4C /* CalculatorViewController.xib in Resources */,
 				F0B3E67419756DAF008DC625 /* mainViewController.xib in Resources */,
 				F025C93519854E2000A58BDE /* bg_top.png in Resources */,
 				F025C93919854E2000A58BDE /* cuboid_img.png in Resources */,
@@ -506,19 +432,15 @@
 			files = (
 				F0B3E69119756EB8008DC625 /* AFURLConnectionOperation.m in Sources */,
 				F0B3E69519756F13008DC625 /* UIImageView+AFNetworking.m in Sources */,
-				F0F99ED21986848D00C5D4E4 /* userMethodVC.m in Sources */,
 				F0B3E68C19756EB8008DC625 /* AFImageRequestOperation.m in Sources */,
 				F0B3E68E19756EB8008DC625 /* AFJSONUtilities.m in Sources */,
 				F0058055197B9A470006B49D /* MagnetUtil.c in Sources */,
 				F0B3E67319756DAF008DC625 /* mainViewController.m in Sources */,
 				F04E2C8419798C3E007E29F8 /* HomeViewController.m in Sources */,
 				F0B3E69219756EB8008DC625 /* AFXMLRequestOperation.m in Sources */,
-				F02551BC1979F98E00289E7A /* weightViewController.m in Sources */,
 				F0B3E65219756C81008DC625 /* AppDelegate.m in Sources */,
-				F025C9451985539400A58BDE /* Managet.m in Sources */,
 				F0B3E68D19756EB8008DC625 /* AFJSONRequestOperation.m in Sources */,
 				F0B3E68B19756EB8008DC625 /* AFHTTPRequestOperation.m in Sources */,
-				F00B30021976B2F900FB9C4C /* CalculatorViewController.m in Sources */,
 				F04E2C8319798C3E007E29F8 /* CycleScrollView.m in Sources */,
 				F0BB62E61976BFD600BBAE31 /* newsListVC.m in Sources */,
 				F0B3E64E19756C81008DC625 /* main.m in Sources */,
@@ -527,11 +449,9 @@
 				F04E2C8619798C3E007E29F8 /* NSTimer+Addition.m in Sources */,
 				F0B3E68A19756EB8008DC625 /* AFHTTPClient.m in Sources */,
 				F0B3E69019756EB8008DC625 /* AFPropertyListRequestOperation.m in Sources */,
-				F0F99ED719868AF300C5D4E4 /* aboutUsVC.m in Sources */,
 				F0B3E68F19756EB8008DC625 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				F0B3E6A2197571CD008DC625 /* JSONKit.m in Sources */,
 				F0B3E6A3197571CD008DC625 /* MBProgressHUD.m in Sources */,
-				F0FB0B6B1983C76A00764248 /* surfaceMagneticV2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

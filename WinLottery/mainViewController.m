@@ -7,14 +7,13 @@
 //
 #import "mainViewController.h"
 #import "AFCustomClient.h"
-#import "CalculatorViewController.h"
+//#import "CalculatorViewController.h"
 #import "newsDetailVC.h"
 #import "newsListVC.h"
 #import "UIImageView+AFNetworking.h"
-#import "weightViewController.h"
-#import "surfaceMagneticV2.h"
-#import "userMethodVC.h"
-#import "aboutUsVC.h"
+//#import "weightViewController.h"
+//#import "surfaceMagneticV2.h"
+
 @interface mainViewController ()
 
 @end
@@ -67,8 +66,17 @@
 #pragma mark -
 #pragma mark tableview delegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section ==0&&indexPath.row ==3) {
+    if (indexPath.section ==0) {
+        if (indexPath.row==0) {
+            
         return 150;
+        }
+        else if (indexPath.row ==1){
+            return 26;
+        }
+        else{
+            return 150;
+        }
     }
     else
         return 44;
@@ -108,34 +116,21 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section==0) {
-        return 4;
+        return 3;
     }
     else{
         return [newsArray count];
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *identifer = [NSString stringWithFormat:@"%d%d",indexPath.section,indexPath.row];
+    NSString *identifer = [NSString stringWithFormat:@"%ld%ld",(long)indexPath.section,(long)indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifer];
+  
     }
     if (indexPath.section== 0) {
         if (indexPath.row == 0) {
-            cell.textLabel.text = @"计算器";
-            cell.imageView.image = [UIImage imageNamed:@"calculator.png"];
-        }
-        else if (indexPath.row == 1){
-            cell.textLabel.text = @"表磁计算器";
-            cell.imageView.image = [UIImage imageNamed:@"density.png"];
-
-        }
-        else if (indexPath.row == 2){
-            cell.textLabel.text = @"重量计算器";
-            cell.imageView.image = [UIImage imageNamed:@"weight.png"];
-
-        }
-        else{
             UITableViewCell* cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell_"];
             NSMutableArray *viewsArray = [@[] mutableCopy];
             NSMutableArray *titlesArray = [@[] mutableCopy];
@@ -168,7 +163,7 @@
             __weak typeof(self) weakSelf = self;
             weakSelf.mainScorllView.fetchContentViewAtIndex = ^UIView *(NSInteger pageIndex){
                 pageControl.currentPage = pageIndex;
-                int index_;
+                NSInteger index_;
                 if(pageIndex==0)
                     index_=[titlesArray count]-1;
                 else
@@ -182,7 +177,7 @@
             };
             self.mainScorllView.TapActionBlock = ^(NSInteger pageIndex){
                 
-                NSLog(@"点击了第%d个",pageIndex);
+                NSLog(@"点击了第%ld个",(long)pageIndex);
                 NSDictionary *newsDic = [weakSelf. _recommendDataArray objectAtIndex:pageIndex];
                 newsDetailVC *det = [[newsDetailVC alloc] init];
                 det.urlStr  = [newsDic valueForKey:@"url"];
@@ -200,107 +195,52 @@
             pageControl.currentPage = 1;
             [cell addSubview:_activeLabel_];
             [cell addSubview:pageControl];
+            return cell;
+        }
+        else if (indexPath.row ==1){
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"infocell"];
+            if (!cell) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"infocell"];
+                UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+                [loginBtn addTarget:self action:@selector(userLogin:) forControlEvents:UIControlEventTouchUpInside];
+                [loginBtn setFrame:CGRectMake(5, 3, 40, 20)];
+                [loginBtn setBackgroundColor:[UIColor redColor]];
+                [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
+                [loginBtn.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
+                [cell.contentView addSubview:loginBtn];
+            }
+            return cell;
+        }
+        else{
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contentcell"];
+            if (!cell) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"infocell"];
+            }
             return cell;
         }
     }
     else {
         cell.textLabel.textColor = MAINCOLOR;
-        /*
-        if(indexPath.row == 0){
-            UITableViewCell* cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell_"];
-            NSMutableArray *viewsArray = [@[] mutableCopy];
-            NSMutableArray *titlesArray = [@[] mutableCopy];
-            for (int i = 0; i < [_recommendDataArray count]; ++i) {
-                UIImageView *_imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.view.bounds.size.width,XLCYCLE_SCEOLL_VIEW_WIDTH)];
-                NSString* url=[[_recommendDataArray objectAtIndex:i] objectForKey:@"img"];
-                NSURL *imagUrl_ = [NSURL URLWithString:url];
-                [_imageView setImageWithURL:imagUrl_
-                           placeholderImage:nil];
-                
-                [viewsArray addObject:_imageView];
-                
-                [titlesArray addObject:[[_recommendDataArray objectAtIndex:i] objectForKey:@"title"]];
-            }
-             self.mainScorllView = [[CycleScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 150) animationDuration:2];
-            UILabel* _activeLabel_ = [[UILabel alloc] initWithFrame:
-                                      CGRectMake(0,130,320,20)];
-            //_activeLabel_.backgroundColor = [UIColor clearColor];
-            [_activeLabel_ setBackgroundColor:[UIColor blackColor]];
-            //设置背景颜色
-            //_activeLabel_.textAlignment = UITextAlignmentCenter;
-            _activeLabel_.textColor = [UIColor whiteColor];
-            [_activeLabel_ setFont:[UIFont systemFontOfSize:14]];
-            //_activeLabel_.shadowColor = [UIColorcolorWithWhite:0.1f alpha:0.8f];
-            //设置UILabel为半透明取值为0.0－1.0
-            _activeLabel_.alpha = 0.5;
-            
-            
-            self.mainScorllView.backgroundColor = [[UIColor purpleColor] colorWithAlphaComponent:0.1];
-            __weak typeof(self) weakSelf = self;
-            weakSelf.mainScorllView.fetchContentViewAtIndex = ^UIView *(NSInteger pageIndex){
-                pageControl.currentPage = pageIndex;
-                int index_;
-                if(pageIndex==0)
-                    index_=[titlesArray count]-1;
-                else
-                    index_=pageIndex-1;
-                
-                _activeLabel_.text=[titlesArray objectAtIndex:index_];
-                return viewsArray[pageIndex];
-            };
-            weakSelf.mainScorllView.totalPagesCount = ^NSInteger(void){
-                return [viewsArray count];
-            };
-            self.mainScorllView.TapActionBlock = ^(NSInteger pageIndex){
-                
-                NSLog(@"点击了第%d个",pageIndex);
-                NSDictionary *newsDic = [weakSelf. _recommendDataArray objectAtIndex:pageIndex];
-                newsDetailVC *det = [[newsDetailVC alloc] init];
-                det.urlStr  = [newsDic valueForKey:@"url"];
-                det.type = @"rec";
-                det.newsDic = newsDic;
-                [weakSelf.navigationController pushViewController:det animated:YES];
-            };
-            
-            [cell addSubview:self.mainScorllView];
-            
-            self.pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(220,130,100,20)]; // 初始化mypagecontrol
-            [pageControl setCurrentPageIndicatorTintColor:[UIColor lightGrayColor]];
-            [pageControl setPageIndicatorTintColor:[UIColor whiteColor]];
-            pageControl.numberOfPages = [viewsArray count];
-            pageControl.currentPage = 1;
-            [cell addSubview:_activeLabel_];
-            [cell addSubview:pageControl];
-            return cell;
-            
-        }
-        
-        if (indexPath.row<newsArray.count) {
             NSDictionary *news = [newsArray objectAtIndex:indexPath.row];
             cell.textLabel.text = [news  valueForKey:@"title"];
-        }*/
-        
-            NSDictionary *news = [newsArray objectAtIndex:indexPath.row];
-            cell.textLabel.text = [news  valueForKey:@"title"];
-        
     }
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            CalculatorViewController *cal = [[CalculatorViewController alloc] init];
-            [self.navigationController pushViewController:cal animated:YES];
+           // CalculatorViewController *cal = [[CalculatorViewController alloc] init];
+           // [self.navigationController pushViewController:cal animated:YES];
         }
         else if (indexPath.row==2)
         {
-            weightViewController *we = [[weightViewController alloc] init];
-            [self.navigationController pushViewController:we animated:YES];
+           // weightViewController *we = [[weightViewController alloc] init];
+           // [self.navigationController pushViewController:we animated:YES];
         }
         else{
-            surfaceMagneticV2 *su = [[surfaceMagneticV2 alloc] init];
-            su._recommendDataArray = _recommendDataArray;
-            [self.navigationController pushViewController:su animated:YES];
+           // surfaceMagneticV2 *su = [[surfaceMagneticV2 alloc] init];
+           // su._recommendDataArray = _recommendDataArray;
+           // [self.navigationController pushViewController:su animated:YES];
         }
     }
     else{
@@ -317,14 +257,7 @@
     }
 }
 #pragma mark --
-#pragma mark button event
-- (IBAction)userMethod:(id)sender {
-    userMethodVC *um = [[userMethodVC alloc] init];
-    [self.navigationController pushViewController:um animated:YES];
-}
-
-- (IBAction)aboutUs:(id)sender {
-    aboutUsVC *au = [[aboutUsVC alloc] init];
-    [self.navigationController pushViewController:au animated:YES];
+-(void)userLogin:(id)sender{
+    
 }
 @end

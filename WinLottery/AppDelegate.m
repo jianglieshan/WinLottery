@@ -50,11 +50,6 @@
     [[AFCustomClient sharedClient] postPath:MAKEPATH(@"Push.jsp") parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dic = [responseObject objectFromJSONData];
         DLog(@"%@",dic);
-      //  newsDetailVC *detail = [newsDetailVC alloc];
-      //  detail.newsDic = [[dic valueForKeyPath:@"rows"] objectAtIndex:0];
-      //  detail.type = @"news";
-     //   detail.urlStr = [[[dic valueForKeyPath:@"rows"] objectAtIndex:0]valueForKeyPath:@"url"];
-        //[(UINavigationController*)self.window.rootViewController pushViewController:detail animated:YES];
         NSString *url = [[[dic valueForKeyPath:@"rows"] objectAtIndex:0]valueForKeyPath:@"url"];
         
         NSString *lastUrl = [[NSUserDefaults standardUserDefaults] valueForKey:@"pushurl"];

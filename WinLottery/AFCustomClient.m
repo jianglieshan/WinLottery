@@ -1,11 +1,14 @@
 //
 //  AFCustomClient.m
-//  calculator
+//
 //
 //  Created by jiangzheng on 14-7-15.
 //  Copyright (c) 2014年 jiangzheng. All rights reserved.
 //
-
+#import "THTTPClient.h"
+#import "TSocketClient.h"
+#import "TBinaryProtocol.h"
+#import "uapp.h"
 #import "AFCustomClient.h"
 @implementation AFCustomClient
 + (AFCustomClient *)sharedClient {
@@ -23,5 +26,13 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
+}
+-(void)testThrift{
+    TSocketClient *transport = [[TSocketClient alloc] initWithHostname:@"www.510cai.com" port:9090];
+    TBinaryProtocol *protocol = [[TBinaryProtocol alloc] initWithTransport:transport strictRead:YES strictWrite:YES];
+    UappServiceClient *client= [[UappServiceClient alloc] initWithProtocol:protocol];
+    VerifyCodeRespBean*result = [client getVerifyCode:UUID];
+    NSLog(@"%@",result.result.msg);
+    
 }
 @end

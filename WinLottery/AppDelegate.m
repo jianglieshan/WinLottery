@@ -42,7 +42,7 @@
     [self autoLogin];
     [self getPushInfo];
     [self setLocalNotifycation];
-   
+    [[AFCustomClient sharedClient] testThrift];
     return YES;
 }
 -(void)getPushInfo{

@@ -12,4 +12,5 @@
 @interface AFCustomClient : AFHTTPClient
 + (AFCustomClient *)sharedClient;
 -(void)newsCountbyId:(NSString*)newsId Type:(NSString*)type;
+-(void)testThrift;
 @end

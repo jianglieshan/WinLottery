@@ -37,7 +37,7 @@
 {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.title = @"磁铁计算器";
+    self.title = @"赢彩票";
     // Do any additional setup after loading the view from its nib.
     SHOWHUD
     NSDictionary *param = [[NSDictionary alloc] initWithObjectsAndKeys:UUID,@"deviceId",@"",@"imsi", nil];
@@ -50,7 +50,7 @@
         else{
             ALERT(@"提示", [ret valueForKey:@"msg"] );
         }
-        DLog(@"%@",ret);
+        //DLog(@"%@",ret);
         [_tableview_ reloadData];
         [hud hide:YES];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -213,14 +213,14 @@
                 [loginBtn.titleLabel setFont:[UIFont systemFontOfSize:14.0f]];
                 [cell.contentView addSubview:loginBtn];
                 if (scrollLabel==nil) {
-                    scrollLabel = [[MarqueeLabel alloc] initWithFrame:CGRectMake(60, 3, 80, 20)];
+                    scrollLabel = [[MarqueeLabel alloc] initWithFrame:CGRectMake(60, 3, 180, 20)];
                     scrollLabel.marqueeType = MLLeftRight;
                     scrollLabel.rate = 30.0f;
                     scrollLabel.fadeLength = 5.0f;
                     scrollLabel.textAlignment = NSTextAlignmentCenter;
                     scrollLabel.tag = 101;
                     scrollLabel.text = @"This is a test of MarqueeLabel - the text is long enough that it needs to scroll to see the whole thing.";
-                    [MarqueeLabel controllerViewWillAppear:self];
+                   // [MarqueeLabel controllerViewWillAppear:self];
                     [cell.contentView addSubview:scrollLabel];
                 }
             }

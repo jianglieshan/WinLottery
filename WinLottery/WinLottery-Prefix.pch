@@ -27,7 +27,7 @@
 
 #define SHOWHUD MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];[self.view addSubview:hud];[hud show:YES];
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-#define MAINCOLOR [UIColor colorWithRed:0/255.0f green:139/255.0f blue:177/255.0f alpha:1]
+#define MAINCOLOR [UIColor redColor]
 
 #define SELECTCOLOR [UIColor colorWithRed:0/255.0f green:104/255.0f blue:200/255.0f alpha:1]
 
